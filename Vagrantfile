@@ -6,14 +6,33 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure("2") do |config|
-    config.vm.define "master" do |subconfig|
-      subconfig.vm.box = "ubuntu/bionic64"
+  #Webserver create
+    config.vm.define "web" do |web|
+     
+    #general config
+    web.vm.box = "ubuntu/bionic64"
+
+
     end
-  
-    config.vm.define "DB" do |subconfig|
-      subconfig.vm.box = "ubuntu/bionic64"
+  #Netconfig
+  web.vm.network "private_network", ip: "192.168.1.50"
+  virtualbox_intnet: true
+
+    #Vmspecs
+    web.vm.provider "virtualbox" do |web|
+      vb_web.name = "Webserver_M300"
+      vb_web.memory = "2048"
+
+
+    end
+    config.vm.define "DB" do |db|
+      db.vm.box = "ubuntu/bionic64"
   
   end
+
+
+
+  #vagrant ssh master oder vagrant ssh DB
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
