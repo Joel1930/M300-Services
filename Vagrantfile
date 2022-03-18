@@ -14,6 +14,7 @@ Vagrant.configure("2") do |config|
 
 
     end
+    
   #Netconfig
   web.vm.network "private_network", ip: "192.168.1.50"
   virtualbox_intnet: true
@@ -25,13 +26,15 @@ Vagrant.configure("2") do |config|
 
 
     end
+
+    #DBserver create
     config.vm.define "DB" do |db|
       db.vm.box = "ubuntu/bionic64"
   
   end
 
 
-
+#123
   #vagrant ssh master oder vagrant ssh DB
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
