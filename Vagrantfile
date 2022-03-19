@@ -35,7 +35,7 @@ Vagrant.configure("2") do |config|
 
      #general config
     db.vm.box = "ubuntu/bionic64"
-    db.vm.synced_folder "./sh_db", "/s_f_db"
+    db.vm.synced_folder "./sh_db", "/sh_f_db"
 
     #Netconfig
     db.vm.network "private_network", ip: "192.168.1.55",
@@ -49,7 +49,7 @@ Vagrant.configure("2") do |config|
 
 
     end
-    db.vm.provision :shell, path: "./Database.sh"
+    db.vm.provision :shell, path: "Database.sh"
   end
 end
 
