@@ -7,6 +7,7 @@ sudo debconf-set-selections <<< "mysql-server mysql-server/root_password passwor
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password Plokijuhz480"
 
 # Installation
+sudo apt-get update
 sudo apt-get install -y mysql-server
 
 # Open MySQL Port

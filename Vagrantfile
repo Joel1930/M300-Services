@@ -20,17 +20,18 @@ Vagrant.configure("2") do |config|
       vm_web.name = "Webserver_M300"
       vm_web.memory = "2048"
 
-    end
-       # webserver install
-       web.vm.provision "shell", inline: <<-SHELL
-       apt-get update
-       apt-get install -y apache2
-       apt-get install -y php libapache2-mod-php php-mysql
-       apt-get install -y mysql-client 
-       rm -rf /var/www/html/index.html
-       cp /sh_f_web/index.html /var/www/html
-       cp /sh_f_web/userinfo.php /var/www/html
-     SHELL
+  end
+
+   # webserver install
+    web.vm.provision "shell", inline: <<-SHELL
+      apt-get update
+      apt-get install -y apache2
+      apt-get install -y php libapache2-mod-php php-mysql
+      apt-get install -y mysql-client 
+      rm -rf /var/www/html/index.html
+      cp /sh_f_web/index.html /var/www/html
+      cp /sh_f_web/userinfo.php /var/www/html
+    SHELL
 
   end
 
@@ -52,9 +53,10 @@ Vagrant.configure("2") do |config|
 
 
     end
-    
+
     #Shell Script for DB install and Setup
     db.vm.provision :shell, path: "Database.sh"
   end
+
 end
 
