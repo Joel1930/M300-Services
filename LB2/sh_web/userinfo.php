@@ -20,7 +20,7 @@
 					$age = $_POST['age'];
 					
 					# database infos
-					$host = "192.168.1.50";
+					$host = "192.168.1.55";
 					$username = "trj";
 					$password = "Qawsedrft123";
 					$dbname = "UserDB";
