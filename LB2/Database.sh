@@ -15,7 +15,7 @@ sudo sed -i -e"s/^bind-address\s*=\s*127.0.0.1/bind-address = 0.0.0.0/" /etc/mys
 
 #Grant Remote Access but only for 192.168.1.50
 mysql -uroot -pPlokijuhz480 <<%EOF%
-	CREATE USER "trj"@"192.168.1.50" IDENTIFIED BY "admin";
+	CREATE USER "trj"@"192.168.1.50" IDENTIFIED BY "Qawsedrft123";
 	GRANT ALL PRIVILEGES ON *.* TO "trj"@"192.168.1.50";
 	FLUSH PRIVILEGES;
 

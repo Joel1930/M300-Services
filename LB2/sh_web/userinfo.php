@@ -22,7 +22,7 @@
 					# database infos
 					$host = "192.168.1.50";
 					$username = "trj";
-					$password = "Plokijuhz480";
+					$password = "Qawsedrft123";
 					$dbname = "UserDB";
 
 					# variable for connection
