@@ -63,10 +63,13 @@ Code
 ### 50 Hat es funktioniert
 Ja, alles hat funktioniert wie man an den folgenden Screenshots sehen kann:
 
+![screen](images/Form.png)
 Anmelde Maske auf der Website
 
+![screen](images/erfolgreiche_eingabe.png)
 Ergebniss auf der Website
 
+![screen](images/db_eintrag.png)
 Resultate wurden erfolgrech in die Datenbank geschrieben
 
 ### 60 Fazit
