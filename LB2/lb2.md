@@ -13,7 +13,7 @@ Der genaue Auftrag konnten die Teams selber bestimmen Als erstes haben wir die T
 * [60 Fazit](#60-fazit)
 
 ### 10 Umgebung
-Vagrant 2.2.19 und VirtualBox 6.1 Umgebung mit Hostonly- und NAT-Netzwerkschnittstellen auf einem Windows Host:
+VirtualBox 6.1.32 Umgebung und Vagrant 2.2.19 mit einem Windows Host
 
 - **Webserver: Webserver_M300**
   - ubuntu/bionic64
@@ -30,6 +30,7 @@ Vagrant 2.2.19 und VirtualBox 6.1 Umgebung mit Hostonly- und NAT-Netzwerkschnitt
 ### 20 Netzwerkplan
 Als erstes, habe ich einen Netzwerkplan erstellt um alles richtig aufzubauen
 
+![screen](images/network.png)
 
 ### 30 Codebeschreibung
 
@@ -60,13 +61,12 @@ Code
 
 
 ### 50 Hat es funktioniert
+Ja, alles hat funktioniert wie man an den folgenden Screenshots sehen kann:
+
+Anmelde Maske auf der Website
+
+Ergebniss auf der Website
+
+Resultate wurden erfolgrech in die Datenbank geschrieben
 
 ### 60 Fazit
-
-
-
-
-
-
-
-
