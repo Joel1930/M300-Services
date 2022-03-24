@@ -16,15 +16,15 @@ Der genaue Auftrag konnten die Teams selber bestimmen Als erstes haben wir die T
 VirtualBox 6.1.32 Umgebung und Vagrant 2.2.19 mit einem Windows Host
 
 - **Webserver: Webserver_M300**
-  - ubuntu/bionic64
-  - Memory 2048MB
-  - Apache2 webserver
+  - Ubuntu/Bionic64
+  - Memory: 2048MB
+  - Software: Apache2 webserver
   - IP & Port 192.168.1.50 guest: 80, host 11930
 
 - **Datenbankserver: DBserver_M300**
-  - ubuntu/bionic64
-  - Memory 2048MB
-  - MySQL DB
+  - Ubuntu/Bionic64
+  - Memory: 2048MB
+  - Software: MySQL DB
   - IP & Port 192.168.1.55:3306
 
 ### 20 Netzwerkplan
@@ -76,6 +76,4 @@ Die Dateneingabe auf der Website war erfolgreich
 Hier sieht man, dass die Daten erfolgreich in der Datenbank gespeichert wurden.
 
 ### 60 Fazit
-
-
-
+Es war ein sehr spannendes Modul, denn ich hatte absolut keine Erfahrung mit Vagrant. Deshalb war ich sehr glücklich in einer solch guten Gruppe gewesen zu sein, die mir helfen konnte. Am Schluss hat alles perfekt so funktioniert, wie wir es geplant haben. Das einzige, was ich eventuell hätte verbessern können wäre die Gestaltung der Website, da jedoch laut dem Lehrer nur die Funktionalität zählt, habe ich das Websiten-Design vernachlässigt.
