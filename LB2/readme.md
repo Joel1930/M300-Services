@@ -136,25 +136,25 @@ Hier restartet man den Server noch, da man Konfigurationsänderungen gemacht hat
 ```
 Hier wird die Formular-Methode bestummen und auf welches PHP es referenbzieren soll, in diesem Fall "userinfo.php".
 ```
-    <table>
-        <tr>
-            <td>
-                <label for="name">Your Name:</label><br>
-                <input type="text" name="name" placeholder="joel" id="">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="lastname">Your Lastname:</label><br>
-                <input type="text" name="lastname" placeholder="traber" id="">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="age">Your age:</label><br>
-                <input type="number" name="age" placeholder="17" id="">
-            </td>
-        </tr>
+  <table>
+  <tr>
+      <td>
+          <label for="name">Your Name:</label><br>
+          <input type="text" name="name" placeholder="joel" id="">
+      </td>
+  </tr>
+  <tr>
+      <td>
+          <label for="lastname">Your Lastname:</label><br>
+          <input type="text" name="lastname" placeholder="traber" id="">
+      </td>
+  </tr>
+  <tr>
+      <td>
+          <label for="age">Your age:</label><br>
+          <input type="number" name="age" placeholder="17" id="">
+      </td>
+  </tr>
 ```
 Hier wird die Tabelle erstellt und mit den Platzhaltern (steht leicht ausgegegraut) in den Formular-Feldern.
 ```
