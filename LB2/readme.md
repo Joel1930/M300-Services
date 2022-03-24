@@ -92,7 +92,9 @@ Mit "end" ist das Erstellen dieser VM abgeschlossen.
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password Plokijuhz480"
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password Plokijuhz480"
 ```
-Mit diesen Befehlen, setzt man das Root-Password (in diesem Fall: Plokijuhz480).
+Mit diesen Befehlen, setzt man das Root-Password.
+
+> **NOTE:** Das Passwort ist: Plokijuhz480.
 
 ```
 sudo apt-get update
