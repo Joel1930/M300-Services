@@ -62,10 +62,10 @@ web.vm.network "forwarded_port", guest: 80, host: 11930
 Hier wird das Netzwerk der VM konfiguriert, wie IP und Ports + weitergeleitete Ports.
 
  ```
-   #Vmspecs Web
-    web.vm.provider "virtualbox" do |vm_web|
-      vm_web.name = "Webserver_M300"
-      vm_web.memory = "2048"
+ #Vmspecs Web
+  web.vm.provider "virtualbox" do |vm_web|
+    vm_web.name = "Webserver_M300"
+    vm_web.memory = "2048"
 ```
 
 Hier kann man noch den Namen und die Arbeitsspeichergrösse definieren. 
@@ -158,9 +158,9 @@ Hier wird die Formular-Methode bestummen und auf welches PHP es referenbzieren s
 ```
 Hier wird die Tabelle erstellt und mit den Platzhaltern (steht leicht ausgegegraut) in den Formular-Feldern.
 ```
-                <td>
-                    <input type="submit" name="submit" value="Send Message">
-                </td>
+  <td>
+      <input type="submit" name="submit" value="Send Message">
+  </td>
 ```
 Mit "Input type" und "name", "value" wird der absende Knopf erstellt. Damit ist der Inhalt des index.html auch schon fertig
 
