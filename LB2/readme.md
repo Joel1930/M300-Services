@@ -11,6 +11,7 @@ Der genaue Auftrag konnten die Teams selber bestimmen Als erstes haben wir die T
 * [40 Wichtige Befehle](#40-wichtige-befehle)
 * [50 Hat es funktioniert?](#50-hat-es-funktioniert)
 * [60 Fazit](#60-fazit)
+* [70 Quellenverzeichnis](#70-quellenverzeichnis)
 
 ### 10 Umgebung
 VirtualBox 6.1.32 Umgebung und Vagrant 2.2.19 mit einem Windows Host.
@@ -152,17 +153,12 @@ Hier wird die Formular-Methode bestummen und auf welches PHP es referenbzieren s
                 <input type="number" name="age" placeholder="17" id="">
             </td>
         </tr>
-        <tr>
 ```
 Hier wird die Tabelle erstellt und mit den Platzhaltern (steht leicht ausgegegraut) in den Formular-Feldern.
 ```
                 <td>
                     <input type="submit" name="submit" value="Send Message">
                 </td>
-            </tr>
-        </table>
-    </form>
-</div>
 ```
 Mit "Input type" und "name", "value" wird der absende Knopf erstellt. Damit ist der Inhalt des index.html auch schon fertig
 
@@ -273,3 +269,10 @@ Hier sieht man, dass die Daten erfolgreich in der Datenbank gespeichert wurden.
 
 ### 60 Fazit
 Es war ein sehr spannendes Modul, denn ich hatte absolut keine Erfahrung mit Vagrant. Deshalb war ich sehr glücklich in einer solch guten Gruppe gewesen zu sein, die mir helfen konnte. Am Schluss hat alles perfekt so funktioniert, wie wir es geplant haben. Das einzige, was ich eventuell hätte verbessern können wäre die Gestaltung der Website, da jedoch laut dem Lehrer nur die Funktionalität zählt, habe ich das Websiten-Design vernachlässigt.
+
+### 70 Quellenverzeichnis
+* [Github von Herr Berger](https://github.com/mbe99/M300)
+* [Vagrant Basics/Cheatsheet](https://github.com/mc-b/M300/tree/master/10-Toolumgebung)
+* [SQL Server Basics](https://www.sqlservertutorial.net/sql-server-basics/)
+* [HTML-Formular mit Datenbank verbinden](https://www.webcodzing.com/connect-html-form-to-mysql-database-using-php/)
+* [HTML-Formular erstellen](https://praxistipps.chip.de/html-formulare-erstellen-so-funktionierts_39325)
