@@ -64,12 +64,18 @@ Code
 Ja, alles hat funktioniert wie man an den folgenden Screenshots sehen kann:
 
 ![screen](images/Form.png)
-Anmelde Maske auf der Website
+</br>
+Das ist die Dateneingabe-Maske auf der Datenbank
 
 ![screen](images/erfolgreiche_eingabe.png)
-Ergebniss auf der Website
+</br>
+Die Dateneingabe auf der Website war erfolgreich
 
 ![screen](images/db_eintrag.png)
-Resultate wurden erfolgrech in die Datenbank geschrieben
+</br>
+Hier sieht man, dass die Daten erfolgreich in der Datenbank gespeichert wurden.
 
 ### 60 Fazit
+
+
+
