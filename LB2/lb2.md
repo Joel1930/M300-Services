@@ -34,7 +34,60 @@ Als erstes, habe ich einen Netzwerkplan erstellt um alles richtig aufzubauen
 
 ### 30 Codebeschreibung
 
+##### Mit Vagrant VMs erstellen:
 
+```
+Vagrant.configure("2") do |config| 
+```
+Dieser Befehl muss am Anfang jedes Vagrant files stehen, dieser startet die "do" Schlaufe.
+```
+  #Webserver create 
+  config.vm.define "web" do |web| 
+```
+Hier wird der eigentliche Server erstellt/definiert (web kann in unserem Fall auch durch DB ersetzt werden)
+     
+```
+#vm config
+web.vm.box = "ubuntu/bionic64"
+web.vm.synced_folder "./sh_web", "/sh_f_web"
+ ```
+
+    
+```
+#Netconfig
+web.vm.network "private_network", ip: "192.168.1.50",
+virtualbox_intnet: true
+web.vm.network "forwarded_port", guest: 80, host: 11930
+```
+
+ ```
+   #Vmspecs Web
+    web.vm.provider "virtualbox" do |vm_web|
+      vm_web.name = "Webserver_M300"
+      vm_web.memory = "2048"
+```
+```
+  end
+```
+
+##### Installationen auf dem <mark>**Webserver**</mark>:
+
+  * ```apt-get update``` (Installiert die neuen Updates für das Ubunutu)
+  * ``` apt-get install -y apache2``` (Installiert Apache. Apache ist ein Webserver)
+  * ```apt-get install -y php libapache2-mod-php php-mysql``` (Installiert ein PHP-Modul, damit der Webserver kommunizieren kann)
+  * ``` apt-get install -y mysql-client ``` (Installiert den MySQL Client)
+  * ```rm -rf /var/www/html/index.html``` (Entfernt den Standard HTML-File.)
+  * ```cp /sh_f_web/index.html /var/www/html``` (Webformular wird dem Linux Ordner hinzugefügt)
+  * ```cp /sh_f_web/userinfo.php /var/www/html``` (PHP-File wird dem Ordner hinzufügt.)
+
+
+
+
+           
+     
+      
+      
+     
 ```
 Code
 ```
