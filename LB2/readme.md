@@ -2,7 +2,7 @@
 ## Webbasierte Dateneingabe mit Datenbank im Hintergrund
 
 ### Projektbeschreibung
-Der genaue Auftrag konnten die Teams selber bestimmen Als erstes haben wir die Teams gemacht und entschieden, was wir machen.
+Der genaue Auftrag konnten die Teams selber bestimmen Als erstes haben wir die Teams gemacht und entschieden, was wir machen. Wir haben uns für einen Webserver mit einer Datenbankverknüpfung entschieden. Dafür arbeiten wir mit Vagrant, Virtualbox, HTML, PHP und Markdown.
 
 ### Inhaltsverzeichnis:
 * [10 Umgebung](#10-umgebung)
@@ -13,7 +13,7 @@ Der genaue Auftrag konnten die Teams selber bestimmen Als erstes haben wir die T
 * [60 Fazit](#60-fazit)
 
 ### 10 Umgebung
-VirtualBox 6.1.32 Umgebung und Vagrant 2.2.19 mit einem Windows Host
+VirtualBox 6.1.32 Umgebung und Vagrant 2.2.19 mit einem Windows Host.
 
 - **Webserver: Webserver_M300**
   - Ubuntu/Bionic64
@@ -28,7 +28,7 @@ VirtualBox 6.1.32 Umgebung und Vagrant 2.2.19 mit einem Windows Host
   - IP & Port 192.168.1.55:3306
 
 ### 20 Netzwerkplan
-Als erstes, habe ich einen Netzwerkplan erstellt um alles richtig aufzubauen
+Als erstes, habe ich einen Netzwerkplan erstellt, damit ich alles richtig aufbaue. Hier drauf sieht man den Client, Webserver, Datenbank und die jeweilige IP-Adresse.
 
 ![screen](images/network.png)
 
@@ -43,7 +43,7 @@ Dieser Befehl muss am Anfang jedes Vagrant files stehen, dieser startet die "do"
   #Webserver create 
   config.vm.define "web" do |web| 
 ```
-Hier wird der eigentliche Server erstellt/definiert ("web" kann in unserem Fall auch durch "DB" ersetzt werden)
+Hier wird der eigentliche Server erstellt/definiert ("web" kann in unserem Fall auch durch "DB" ersetzt werden).
      
 ```
 #vm config
@@ -81,9 +81,9 @@ Mit "end" ist das Erstellen dieser VM abgeschlossen.
   * ``` apt-get install -y apache2``` (Installiert Apache. Apache ist ein Webserver)
   * ```apt-get install -y php libapache2-mod-php php-mysql``` (Installiert ein PHP-Modul, damit der Webserver kommunizieren kann)
   * ``` apt-get install -y mysql-client ``` (Installiert den MySQL Client)
-  * ```rm -rf /var/www/html/index.html``` (Entfernt den Standard HTML-File.)
+  * ```rm -rf /var/www/html/index.html``` (Entfernt den Standard HTML-File)
   * ```cp /sh_f_web/index.html /var/www/html``` (Webformular wird dem Linux Ordner hinzugefügt)
-  * ```cp /sh_f_web/userinfo.php /var/www/html``` (PHP-File wird dem Ordner hinzufügt.)
+  * ```cp /sh_f_web/userinfo.php /var/www/html``` (PHP-File wird dem Ordner hinzufügt)
 
 ##### SQL Installation:
 
@@ -91,17 +91,17 @@ Mit "end" ist das Erstellen dieser VM abgeschlossen.
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password Plokijuhz480"
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password Plokijuhz480"
 ```
-Mit diesen Befehlen, setzt man das Root-Password (in diesem Fall: Plokijuhz480)
+Mit diesen Befehlen, setzt man das Root-Password (in diesem Fall: Plokijuhz480).
 
 ```
 sudo apt-get update
 sudo apt-get install -y mysql-server
 ```
-Hier updated und installiert den MySQL Server
+Hier updated und installiert den MySQL Server.
 ```
 sudo sed -i -e"s/^bind-address\s=\s127.0.0.1/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
-Hier öffnet man den Port für MySQL und das Konfigurationsfile im Ubuntu
+Hier öffnet man den Port für MySQL und das Konfigurationsfile im Ubuntu.
 
 ```
 mysql -uroot -pPlokijuhz480 <<%EOF%
@@ -109,7 +109,7 @@ mysql -uroot -pPlokijuhz480 <<%EOF%
     GRANT ALL PRIVILEGES ON . TO "trj"@"192.168.1.50";
     FLUSH PRIVILEGES;
 ```
-Hier erlaubt man der IP: "192.168.1.50" Remote Access mit dem Benutzernamen "TRJ" und Passwort "Qawsedrft123"
+Hier erlaubt man der IP: "192.168.1.50" Remote Access mit dem Benutzernamen "TRJ" und Passwort "Qawsedrft123".
 
 ```
     CREATE DATABASE UserDB;
@@ -118,7 +118,7 @@ Hier erlaubt man der IP: "192.168.1.50" Remote Access mit dem Benutzernamen "TRJ
 
 %EOF%
 ```
-Hier erstellt man die Datenbank "UserDB" und erstellt die Tabellen mit den Inhalten: "name", "lastname" und "age"
+Hier erstellt man die Datenbank "UserDB" und erstellt die Tabellen mit den Inhalten: "name", "lastname" und "age".
 
 ```
 sudo service mysql restart
@@ -131,7 +131,7 @@ Hier restartet man den Server noch, da man Konfigurationsänderungen gemacht hat
     <form method="POST" action="userinfo.php">
         <h1>Userinfos</h1>
 ```
-Hier wird die Formular-Methode bestummen und auf welches PHP es referenbzieren soll, in diesem Fall "userinfo.php"
+Hier wird die Formular-Methode bestummen und auf welches PHP es referenbzieren soll, in diesem Fall "userinfo.php".
 ```
     <table>
         <tr>
@@ -154,7 +154,7 @@ Hier wird die Formular-Methode bestummen und auf welches PHP es referenbzieren s
         </tr>
         <tr>
 ```
-Hier wird die Tabelle erstellt und mit den Platzhaltern (steht leicht ausgegegraut) in den Formular-Feldern
+Hier wird die Tabelle erstellt und mit den Platzhaltern (steht leicht ausgegegraut) in den Formular-Feldern.
 ```
                 <td>
                     <input type="submit" name="submit" value="Send Message">
@@ -230,7 +230,7 @@ Mit diesem Befehl, schliesst man die MySQL connection
 
 
 ### 40 Wichtige Befehle
-#### Befehlstabelle Vagrant
+#### Befehlstabelle Vagrant:
 |Resultat    |Command                   |
 |-------------------------|--------------------------|
 |hochfahren / erstellen   |`vagrant up`              |
@@ -241,7 +241,7 @@ Mit diesem Befehl, schliesst man die MySQL connection
 |SSH Verbindung trennen          |`exit`            |
 
 
-#### Befehlstabelle SQL
+#### Befehlstabelle SQL:
 |Resultat  |Command                   |
 |-------------------------|--------------------------|
 |hochfahren / erstellen   |`mysql -uroot -p` und dann das Passwort             |
@@ -254,11 +254,11 @@ Ja, alles hat funktioniert wie man an den folgenden Screenshots sehen kann:
 
 ![screen](images/Form.png)
 </br>
-Das ist die Dateneingabe-Maske auf der Datenbank
+Das ist die Dateneingabe-Maske auf der Website.
 
 ![screen](images/erfolgreiche_eingabe.png)
 </br>
-Die Dateneingabe auf der Website war erfolgreich
+Die Dateneingabe auf der Website war erfolgreich.
 
 ![screen](images/db_eintrag.png)
 </br>
