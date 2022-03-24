@@ -94,7 +94,7 @@ sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again p
 ```
 Mit diesen Befehlen, setzt man das Root-Password.
 
-> **NOTE:** Das Passwort ist: Plokijuhz480.
+> **NOTE:** Das Passwort ist: Plokijuhz480
 
 ```
 sudo apt-get update
